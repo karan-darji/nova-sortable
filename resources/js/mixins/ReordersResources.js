@@ -17,9 +17,7 @@ export default {
   },
   watch: {
     resources(newVal, oldVal) {
-      if (newVal.length !== oldVal.length) {
-        this.fakeResources = this.resources;
-      }
+      this.fakeResources = this.resources;
     },
   },
   methods: {

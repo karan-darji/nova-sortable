@@ -9,6 +9,5 @@ mix
   .vue({ version: 3 })
   .nova('outl1ne/nova-sortable')
   .alias({
-    'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
     '@': path.join(__dirname, 'resources/js/'),
   });

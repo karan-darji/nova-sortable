@@ -212,7 +212,6 @@
 
 <script>
 import filter from 'lodash/filter'
-import { Inertia } from '@inertiajs/inertia'
 import ReordersResources from '../mixins/ReordersResources'
 
 export default {

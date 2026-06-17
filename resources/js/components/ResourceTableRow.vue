@@ -96,7 +96,8 @@
             class="toolbar-button hover:text-primary-500 px-2"
             @click.stop
           >
-            <Icon type="eye" />
+            <EyeIcon />
+
           </Link>
         </template>
 
@@ -122,7 +123,7 @@
             class="toolbar-button hover:text-primary-500"
             @click.stop
           >
-            <Icon type="pencil-alt" />
+            <PencilAltIcon />
           </Link>
 
           <!-- Edit Resource Link -->
@@ -141,7 +142,7 @@
             class="toolbar-button hover:text-primary-500 px-2"
             @click.stop
           >
-            <Icon type="pencil-alt" />
+            <PencilAltIcon />
           </Link>
         </template>
 
@@ -158,7 +159,7 @@
           class="toolbar-button hover:text-primary-500 px-2"
           @click.stop="openDeleteModal"
         >
-          <Icon type="trash" />
+          <TrashIcon />
         </button>
 
         <!-- Restore Resource Link -->
@@ -174,7 +175,7 @@
           class="toolbar-button hover:text-primary-500 px-2"
           @click.stop="openRestoreModal"
         >
-          <Icon type="refresh" />
+          <RefreshIcon />
         </button>
 
         <DeleteResourceModal
@@ -213,10 +214,15 @@
 <script>
 import filter from 'lodash/filter'
 import ReordersResources from '../mixins/ReordersResources'
+import RefreshIcon from '../icons/RefreshIcon';
+import EyeIcon from '../icons/EyeIcon';
+import PencilAltIcon from '../icons/PencilAltIcon';
+import TrashIcon from '../icons/TrashIcon';
 
 export default {
   emits: ['actionExecuted'],
   mixins: [ReordersResources],
+  components: { RefreshIcon, EyeIcon, PencilAltIcon, TrashIcon },
 
   props: [
     'testId',
